@@ -121,3 +121,27 @@ func main() {
 
 	log.Panic(http.ListenAndServe(":"+apiListenURL.Port(), handlers.CompressHandler(rootRouter)))
 }
+
+//https://github.com/photoview/photoview
+//
+//sudo docker run -it --entrypoint sh viktorstrate/photoview
+//copy
+//sudo docker cp 74ba34a8do19ec:/app  /home/zyq/Downloads
+//sudo docker cp /home/zyq/Downloads/dist 74ba34a8do19ec:/ui
+//sudo docker cp 74ba34a819ec:/ui /home/zyq/Downloads/dist
+//mount???
+//sudo docker run -d -it --name mnt -v /home/Downloads/mnt:/ui viktorstrate/photoview:edge
+//GRANT ALL PRIVILEGES ON *.* TO 'dbuser'@'%' IDENTIFIED BY 'dbuser' WITH GRANT OPTION;
+//FLUSH PRIVILEGES;
+//grant all privileges on `数据库名`.* to '用户名'@'%' identified by '密码' with grant option;
+//grant all privileges on `photoview`.* to 'dbuser'@'%' identified by 'dbuser' with grant option;
+//********
+// Build the Web user-interface
+// $ cd ui/
+// $ npm install
+// $ npm run build
+// This builds the UI source code and saves it in the ui/build/ directory.
+
+//docker run -d -P --name mariadb_connect -e MYSQL_ROOT_PASSWORD=dockersql  mariadb:10.5
+
+///curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash - &&\ apt-get install -y nodejs
