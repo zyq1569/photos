@@ -2,6 +2,7 @@ package main
 
 import (
 	"log"
+	// "mime"
 	"net/http"
 	"path"
 
@@ -28,7 +29,12 @@ import (
 
 func main() {
 
-	log.Println("Starting Photoview...")
+	// Windows may be missing this
+	// mime.AddExtensionType(".js", "application/javascript")
+
+	// And then you create the FileServer like you normally would
+	// http.Handle("/", http.FileServer(http.Dir("static")))
+	log.Println("------------Starting Photoview...------------------")
 
 	if err := godotenv.Load(); err != nil {
 		log.Println("No .env file found")
@@ -145,3 +151,5 @@ func main() {
 //docker run -d -P --name mariadb_connect -e MYSQL_ROOT_PASSWORD=dockersql  mariadb:10.5
 
 ///curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash - &&\ apt-get install -y nodejs
+//https://codeandlife.com/2022/02/12/fixing-mime-type-golang-net-http-fileserver/
+//https://vimsky.com/examples/detail/golang-ex-mime---AddExtensionType-function.html
