@@ -1,9 +1,12 @@
 package routes
 
 import (
+	// "log"
+	"mime"
 	"net/http"
 	"os"
 	"path/filepath"
+	"runtime"
 )
 
 // SpaHandler implements the http.Handler interface, so we can use it
@@ -37,7 +40,13 @@ func (h SpaHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// prepend the path with the path to the static directory
-	path = filepath.Join(h.staticPath, path)
+	if runtime.GOOS == "windows" {
+		path = h.staticPath
+		mime.AddExtensionType(".js", "application/javascript")
+		//log.Println("windows: " + path)
+	} else {
+		path = filepath.Join(h.staticPath, path)
+	}
 
 	// check whether a file exists at the given path
 	_, err = os.Stat(path)
