@@ -14,6 +14,8 @@ You configure Photoview to look for photos and videos within a directory on your
 
 When your media has been scanned they show up on the website, organised in the same way as on the filesystem.
 
+##freeget.one@gmail.com
+
 > If you have questions regarding setup or development,
 feel free to join the Discord server https://discord.gg/jQ392948u9
 
