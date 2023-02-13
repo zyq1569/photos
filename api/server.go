@@ -25,10 +25,14 @@ import (
 	"github.com/photoview/photoview/api/utils"
 
 	"github.com/99designs/gqlgen/graphql/playground"
+	// log4go "github.com/jeanphorn/log4go"
 )
 
 func main() {
 
+	// log4go.AddFilter("stdout", log4go.ERROR, log4go.NewConsoleLogWriter())
+	// log4go.AddFilter("file", log4go.ERROR, log4go.NewFileLogWriter("./log/PhotosApp.log", false, true))
+	// log4go.Info("----------Level:ERROR---------------")
 	// Windows may be missing this
 	// mime.AddExtensionType(".js", "application/javascript")
 
@@ -128,6 +132,8 @@ func main() {
 	log.Panic(http.ListenAndServe(":"+apiListenURL.Port(), handlers.CompressHandler(rootRouter)))
 }
 
+//https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types
+///freeget.one@gmail.com
 //https://github.com/photoview/photoview
 //
 //sudo docker run -it --entrypoint sh viktorstrate/photoview
