@@ -43,6 +43,7 @@ func (h SpaHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	if runtime.GOOS == "windows" {
 		path = h.staticPath
 		mime.AddExtensionType(".js", "application/javascript")
+		mime.AddExtensionType(".css", "text/css")
 		//log.Println("windows: " + path)
 	} else {
 		path = filepath.Join(h.staticPath, path)
