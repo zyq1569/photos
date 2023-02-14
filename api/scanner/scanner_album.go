@@ -5,7 +5,11 @@ import (
 	"io/ioutil"
 	"log"
 	"os"
+	"os/exec"
 	"path"
+	"path/filepath"
+	"runtime"
+	"strings"
 
 	"github.com/photoview/photoview/api/graphql/models"
 	"github.com/photoview/photoview/api/scanner/media_encoding"
@@ -20,16 +24,24 @@ import (
 func NewRootAlbum(db *gorm.DB, rootPath string, owner *models.User) (*models.Album, error) {
 
 	if !ValidRootPath(rootPath) {
-		return nil, ErrorInvalidRootPath
-	}
-
-	if !path.IsAbs(rootPath) {
-		wd, err := os.Getwd()
-		if err != nil {
-			return nil, err
+		// if runtime.GOOS == "windows" {
+		path, err := GetCurrentPath()
+		if err == nil {
+			return nil, ErrorInvalidRootPath
+		} else {
+			rootPath = path + "photos"
 		}
-
-		rootPath = path.Join(wd, rootPath)
+		log.Printf("Warn: set rootPath : '%s'\n%s\n", rootPath, "default")
+		// }
+	}
+	if runtime.GOOS != "windows" {
+		if !path.IsAbs(rootPath) {
+			wd, err := os.Getwd()
+			if err != nil {
+				return nil, err
+			}
+			rootPath = path.Join(wd, rootPath)
+		}
 	}
 
 	owners := []models.User{
@@ -202,4 +214,26 @@ func processMedia(ctx scanner_task.TaskContext, mediaData *media_encoding.Encode
 	}
 
 	return scanner_tasks.Tasks.ProcessMedia(ctx, mediaData, mediaCachePath)
+}
+
+func GetCurrentPath() (string, error) {
+	file, err := exec.LookPath(os.Args[0])
+	if err != nil {
+		return "", err
+	}
+	path, err := filepath.Abs(file)
+	if err != nil {
+		return "", err
+	}
+	//fmt.Println("path111:", path)
+	if runtime.GOOS == "windows" {
+		path = strings.Replace(path, "\\", "/", -1)
+	}
+	//fmt.Println("path222:", path)
+	i := strings.LastIndex(path, "/")
+	if i < 0 {
+		return "", errors.New(`Can't find "/" or "\".`)
+	}
+	//fmt.Println("path333:", path)
+	return string(path[0 : i+1]), nil
 }
