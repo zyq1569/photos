@@ -178,9 +178,14 @@ func MigrateDatabase(db *gorm.DB) error {
 		log.Printf("Setup UserAlbums join table failed: %v\n", err)
 	}
 
-	if err := db.AutoMigrate(database_models...); err != nil {
+	// if err := db.AutoMigrate(database_models...); err != nil {
+	// 	log.Printf("Auto migration failed: %v\n", err)
+	// }
+
+	if err := db.Set("gorm:table_options", "ENGINE=InnoDB DEFAULT CHARSET=utf8").AutoMigrate(database_models...); err != nil {
 		log.Printf("Auto migration failed: %v\n", err)
 	}
+	// db.Set("gorm:table_options", "ENGINE=InnoDB DEFAULT CHARSET=utf8").AutoMigrate(&models.Media{})
 
 	// v2.1.0 - Replaced by Media.CreatedAt
 	if db.Migrator().HasColumn(&models.Media{}, "date_imported") {
