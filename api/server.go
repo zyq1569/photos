@@ -132,6 +132,9 @@ func main() {
 	log.Panic(http.ListenAndServe(":"+apiListenURL.Port(), handlers.CompressHandler(rootRouter)))
 }
 
+///
+///gorm 指定字段编码
+///https://jasperxu.github.io/gorm-zh/database.html#m
 //https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types
 ///freeget.one@gmail.com
 //https://github.com/photoview/photoview
