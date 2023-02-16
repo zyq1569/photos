@@ -3,6 +3,10 @@ package utils
 import (
 	"os"
 	"strings"
+
+	"os/exec"
+	"path/filepath"
+	"runtime"
 )
 
 // EnvironmentVariable represents the name of an environment variable used to configure Photoview
@@ -80,6 +84,36 @@ func UIPath() string {
 	if path := EnvUIPath.GetValue(); path != "" {
 		return path
 	}
+	exepath, err := GetCurrentPath()
+	if err != nil {
+
+		os.Exit(1)
+	} else {
+		exepath := exepath + "ui"
+		return exepath
+	}
 
 	return "./ui"
+}
+
+func GetCurrentPath() (string, error) {
+	file, err := exec.LookPath(os.Args[0])
+	if err != nil {
+		return "", err
+	}
+	path, err := filepath.Abs(file)
+	if err != nil {
+		return "", err
+	}
+	//fmt.Println("path111:", path)
+	if runtime.GOOS == "windows" {
+		path = strings.Replace(path, "\\", "/", -1)
+	}
+	//fmt.Println("path222:", path)
+	i := strings.LastIndex(path, "/")
+	if i < 0 {
+		return "", err
+	}
+	//fmt.Println("path333:", path)
+	return string(path[0 : i+1]), nil
 }
