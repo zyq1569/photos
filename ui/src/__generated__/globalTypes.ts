@@ -24,6 +24,7 @@ export enum LanguageTranslation {
   Spanish = 'Spanish',
   Swedish = 'Swedish',
   TraditionalChinese = 'TraditionalChinese',
+  Turkish = 'Turkish',
 }
 
 export enum MediaType {
@@ -46,6 +47,18 @@ export enum NotificationType {
 export enum OrderDirection {
   ASC = 'ASC',
   DESC = 'DESC',
+}
+
+/**
+ * Supported downsampling filters for thumbnail generation
+ */
+export enum ThumbnailFilter {
+  Box = 'Box',
+  CatmullRom = 'CatmullRom',
+  Lanczos = 'Lanczos',
+  Linear = 'Linear',
+  MitchellNetravali = 'MitchellNetravali',
+  NearestNeighbor = 'NearestNeighbor',
 }
 
 //==============================================================
