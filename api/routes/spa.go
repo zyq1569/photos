@@ -1,7 +1,6 @@
 package routes
 
 import (
-	// "log"
 	"mime"
 	"net/http"
 	"os"
@@ -31,7 +30,7 @@ func NewSpaHandler(staticPath string, indexPath string) SpaHandler {
 // is suitable behavior for serving an SPA (single page application).
 func (h SpaHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	// get the absolute path to prevent directory traversal
-	path, err := filepath.Abs(r.URL.Path)
+	path, err := filepath.Clean(r.URL.Path)
 	if err != nil {
 		// if we failed to get the absolute path respond with a 400 bad request
 		// and stop
@@ -44,7 +43,6 @@ func (h SpaHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		path = h.staticPath
 		mime.AddExtensionType(".js", "application/javascript")
 		mime.AddExtensionType(".css", "text/css")
-		//log.Println("windows: " + path)
 	} else {
 		path = filepath.Join(h.staticPath, path)
 	}
