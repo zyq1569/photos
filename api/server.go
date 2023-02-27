@@ -132,7 +132,8 @@ func main() {
 	log.Panic(http.ListenAndServe(":"+apiListenURL.Port(), handlers.CompressHandler(rootRouter)))
 }
 
-///
+////home/pfs/project/health1212/Tools/Photoview
+///https://gb.falundafa.org/chigb/zfl2.htm
 ///gorm 指定字段编码
 ///https://jasperxu.github.io/gorm-zh/database.html#m
 //https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types
