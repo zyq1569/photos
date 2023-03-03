@@ -1,10 +1,6 @@
 <img src="./screenshots/photoview-logo.svg" height="92px" alt="photoview logo" />
 
 [![License](https://img.shields.io/github/license/viktorstrate/photoview)](./LICENSE.md)
-[![GitHub contributors](https://img.shields.io/github/contributors/viktorstrate/photoview)](https://github.com/viktorstrate/photoview/graphs/contributors)
-[![Docker Pulls](https://img.shields.io/docker/pulls/viktorstrate/photoview)](https://hub.docker.com/r/viktorstrate/photoview)
-[![Docker builds](https://github.com/photoview/photoview/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/photoview/photoview/actions/workflows/build.yml)
-[![codecov](https://codecov.io/gh/photoview/photoview/branch/master/graph/badge.svg?token=AATZKC93F7)](https://codecov.io/gh/photoview/photoview)
 
 ![screenshot](./screenshots/timeline.png)
 
