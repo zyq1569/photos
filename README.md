@@ -28,7 +28,6 @@ Password: **demo**
 - [Why yet another self-hosted photo gallery](#why-yet-another-self-hosted-photo-gallery)
 - [Getting started - Setup with Docker](#getting-started---setup-with-docker)
 - [Set up development environment](#setup-development-environment)
-- [Sponsors](#sponsors)
 
 ## Main features
 
