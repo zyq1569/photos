@@ -46,6 +46,7 @@ Password: **demo**
 - [Unraid](https://forums.unraid.net/topic/103028-support-photoview-corneliousjd-repo/)
 - EmbassyOS: [announcement](https://start9labs.medium.com/new-service-photoview-72ee681b2ff0), [repo](https://github.com/Start9Labs/embassyos-photoview-wrapper)
 - [YunoHost](https://github.com/YunoHost-Apps/photoview_ynh)
+- [windows](https://github.com/zyq1569/photos/releases/tag/v1.0.0)
 
 ## Why yet another self-hosted photo gallery
 
