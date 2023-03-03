@@ -1,10 +1,11 @@
+详细参考 官网https://photoview.github.io
+
 <img src="./screenshots/photoview-logo.svg" height="92px" alt="photoview logo" />
 
 [![License](https://img.shields.io/github/license/viktorstrate/photoview)](./LICENSE.md)
 
 ![screenshot](./screenshots/timeline.png)
 
-详细参考 官网https://photoview.github.io/
 
 Photoview是一个简单且用户友好的照片库，专为摄影师设计，旨在提供一种简单快捷的方式来导航目录，其中包含数千张高分辨率照片。
 
