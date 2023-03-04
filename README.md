@@ -1,4 +1,5 @@
 详细参考 官网https://photoview.github.io
+修改源码已经可以支持 windows 版本(直接下载预编译的文件)
 
 无界浏览 https://github.com/wujieliulan/forum
 
@@ -7,8 +8,6 @@
 [![License](https://img.shields.io/github/license/viktorstrate/photoview)](./LICENSE.md)
 
 ![screenshot](./screenshots/timeline.png)
-##![screenshot](./screenshots/Sharing.webp)
-##![screenshot](./screenshots/Maps.webp)
 
 Photoview是一个简单且用户友好的照片库，专为摄影师设计，旨在提供一种简单快捷的方式来导航目录，其中包含数千张高分辨率照片。
 
