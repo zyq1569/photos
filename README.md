@@ -1,4 +1,5 @@
 详细参考 官网https://photoview.github.io
+
 修改源码已经可以支持 windows 版本(直接下载预编译的文件)
 
 快速访问外网的途径 无界浏览 https://github.com/wujieliulan/forum
