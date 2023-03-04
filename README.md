@@ -1,5 +1,7 @@
 详细参考 官网https://photoview.github.io
 
+无界浏览 https://github.com/wujieliulan/forum
+
 <img src="./screenshots/photoview-logo.svg" height="92px" alt="photoview logo" />
 
 [![License](https://img.shields.io/github/license/viktorstrate/photoview)](./LICENSE.md)
