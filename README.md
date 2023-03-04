@@ -2,6 +2,8 @@
 
 修改源码已经可以支持 windows 版本(直接下载预编译的文件)
 
+- [windows](https://github.com/zyq1569/photos/releases/tag/v1.0.0)
+
 快速访问外网的途径 无界浏览 https://github.com/wujieliulan/forum
 
 <img src="./screenshots/photoview-logo.svg" height="92px" alt="photoview logo" />
