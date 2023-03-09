@@ -14,7 +14,7 @@
 临时外网IP获取方法:
 给freeget.ip@gmail.com发一个电子邮件(标题不可空白)，10分钟内会收到回信，拿到几个IP。最好用海外邮箱。
 邮件可能会被当作垃圾邮件，请检查垃圾邮件文件夹确认是否已收到邮件。
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+}
 
 <img src="./screenshots/photoview-logo.svg" height="92px" alt="photoview logo" />
 
