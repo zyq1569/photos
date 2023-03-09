@@ -7,13 +7,13 @@
 快速访问外网的途径 无界浏览 https://github.com/wujieliulan/forum
 
 {~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-访问外网软件下载方法：
+其它外网软件下载方法：
 使用海外信箱寄一封信(主题不可空白)到以下邮址约十分钟就可以收到下载点。
 自由门 ziyoumen99@gmail.com
 
 临时外网IP获取方法:
-给freeget.ip@gmail.com发一个电子邮件(标题不可空白)，10分钟内会收到回信，拿到几个IP。最好用海外邮箱。
-邮件可能会被当作垃圾邮件，请检查垃圾邮件文件夹确认是否已收到邮件。
+给freeget.ip@gmail.com发一个电子邮件(标题不可空白)，10分钟内会收到 几个IP。最好用海外邮箱。
+邮件可能会被当作垃圾邮件，请检查垃圾邮件确认是否已收。
 }
 
 <img src="./screenshots/photoview-logo.svg" height="92px" alt="photoview logo" />
