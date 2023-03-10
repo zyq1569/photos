@@ -163,3 +163,4 @@ func main() {
 ///curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash - &&\ apt-get install -y nodejs
 //https://codeandlife.com/2022/02/12/fixing-mime-type-golang-net-http-fileserver/
 //https://vimsky.com/examples/detail/golang-ex-mime---AddExtensionType-function.html
+//wujieliulan---get xiazai@upup.info
